@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.2'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'bottle.demo'
+version '1.0-SNAPSHOT'
+apply plugin: 'com.github.johnrengelman.shadow'
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile fileTree(dir:'libs',include:['*.jar'])
+    compile 'org.freemarker:freemarker:2.3.28'
+}
+
+shadowJar {
+    baseName = 'apidoc'
+    classifier = null
+    version = null
+}

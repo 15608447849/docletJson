@@ -1,0 +1,31 @@
+<#list docList as doc>
+
+    <table border="1" cellspacing="0" cellpadding="0" >
+        <tr>
+            <td><h5 >&nbsp接口坐标&nbsp&nbsp</h5></td>
+            <td>&nbsp${doc.point}&nbsp</td>
+        </tr>
+        <tr>
+            <td><h5>&nbsp接口摘要&nbsp&nbsp</h5></td>
+            <td>&nbsp${doc.remark}&nbsp</td>
+        </tr>
+        <tr>
+            <td><h5>&nbsp业务场景&nbsp&nbsp</h5></td>
+            <td>&nbsp${doc.scene}&nbsp</td>
+        </tr>
+        <tr>
+            <td><h5>&nbsp传参类型&nbsp&nbsp</h5></td>
+            <td>&nbsp${doc.type}&nbsp</td>
+        </tr>
+        <tr>
+            <td><h5>&nbsp传参列表&nbsp&nbsp</h5></td>
+            <td>&nbsp${doc.in}&nbsp</td>
+        </tr>
+        <tr>
+            <td><h5>&nbsp返回列表&nbsp&nbsp</h5></td>
+            <td>&nbsp${doc.out}&nbsp</td>
+        </tr>
+    </table>
+    <br>
+
+</#list>
